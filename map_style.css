@@ -21,7 +21,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #c7ced4;
+  background-color: #ffffff;
   padding: 1 px;
   border: 1px solid #000000;
   margin: 1px;
@@ -29,11 +29,13 @@
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 2px;
   font-size: 30px;
   text-align: center;
   height: 150px;
   width: 150px;
+  margin: 1px;
+  font-family: "Courier New", Courier, monospace;
 }
