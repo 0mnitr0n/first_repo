@@ -1,12 +1,12 @@
 #div1 {
-  width: 302px;
-  height: 302px;
+  width: 150px;
+  height: 150px;
   padding: 3px;
-  border: 3px solid #aaaaaa;
+  border: 3px solid #000000;
 }
 #div2 {
-    width: 302px;
-    height: 302px;
+    width: 150px;
+    height: 150px;
     padding: 3px;
-    border: 3px solid #aaaaaa;
+    border: 3px solid #000000;
   }
