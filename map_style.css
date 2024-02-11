@@ -25,7 +25,8 @@
   padding: 0 px;
   border: 1px solid #000000;
   margin: 1px;
-  text-align: center;
+  align-items: center;
+  justify-items: center;
 }
 
 .grid-item {
@@ -37,5 +38,4 @@
   height: 150px;
   width: 150px;
   margin: 1px;
-  font-family: "Courier New", Courier, monospace;
 }
