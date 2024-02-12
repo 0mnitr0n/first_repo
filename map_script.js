@@ -13,3 +13,19 @@ function drop(ev) {
   console.log(data);
   console.log(ev.target);
 }
+
+window.onload = function() {
+  var gridContainer = document.querySelector('.grid-container');
+  var numColumns = Math.floor(window.innerWidth / 150);
+  /*var numRows = Math.floor(window.innerHeight / 150);*/
+  gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
+  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 150px)`;*/
+}
+
+window.onresize = function(){
+  var gridContainer = document.querySelector('.grid-container');
+  var numColumns = Math.floor(window.innerWidth / 150);
+  /*var numRows = Math.floor(window.innerHeight / 150);*/
+  gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
+  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 150px)`;*/
+}
