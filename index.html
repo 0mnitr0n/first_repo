@@ -21,7 +21,7 @@
 -->
     <br><br>
 
-    <img id="drag1" src="twisterfish_logo.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+    <img id="drag1" src="twisterfish_logo.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
 
     <br><br>
 
@@ -31,26 +31,23 @@
     <!-- grid class around divs -->
     <p>Drag TwisterFish into the grid:</p>
 
-
-    <div class="grid-container">
+    <div class="grid-container" id="map_container">
         <!-- 
         <div id="div_A" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="div_B" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         -->
         <script>
-            let width = screen.availWidth / 150;
-            let height = screen.availHeight / 150;
+            let width = (screen.availWidth / 100) - 1;
+            let height = (screen.availHeight / 100) - 1;
             for (let x = 0; x < height; x++){
                 for (let i = 0; i < width; i++) {
                     document.write(
-                        '<div id="div_' + i + '" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>'
+                        '<div id="div_' + i + '" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event) "></div>'
                     );
                 }
             }  
-
-            
-
         </script>
+        
     </div>
 
 </body>

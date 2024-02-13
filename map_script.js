@@ -16,16 +16,20 @@ function drop(ev) {
 
 window.onload = function() {
   var gridContainer = document.querySelector('.grid-container');
-  var numColumns = Math.floor(window.innerWidth / 150);
-  /*var numRows = Math.floor(window.innerHeight / 150);*/
+  gridContainer.innerWidth = window.innerWidth;
+  var numColumns = Math.floor(gridContainer.innerWidth / 100);
   gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
-  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 150px)`;*/
+  
+  var numRows = Math.floor(gridContainer.innerHeight / 100);
+  gridContainer.style.gridTemplateRows = `repeat(${numRows}, 100px)`;
 }
 
 window.onresize = function(){
   var gridContainer = document.querySelector('.grid-container');
-  var numColumns = Math.floor(window.innerWidth / 150);
-  /*var numRows = Math.floor(window.innerHeight / 150);*/
+  gridContainer.innerWidth = window.innerWidth;
+  var numColumns = Math.floor(gridContainer.innerWidth / 100);  
   gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
-  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 150px)`;*/
+
+  /*var numRows = Math.floor(gridContainer.innerHeight / 100);*/
+  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 100px)`;*/
 }
