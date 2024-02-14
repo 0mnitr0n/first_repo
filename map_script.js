@@ -41,5 +41,5 @@ window.onresize = function () {
   gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
 
   /*var numRows = Math.floor(gridContainer.innerHeight / 100);*/
-  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 100px)`;*/
+  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 100px)`;    transform: rotateZ(360deg);*/
 }
