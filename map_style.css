@@ -54,5 +54,5 @@
 
 .flip-this:hover {
   transition: 0.9s;
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
 }
