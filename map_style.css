@@ -6,7 +6,8 @@
   grid-gap: 0px;
   background-color: #ffffff;
   background: url("battlemap_bg.png") center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding: 0 px;
   margin: 0px;
 }
@@ -49,5 +50,5 @@
 .flip-this:hover {
   transition: 0.9s;
   
-  transform: rotate3d(1, 2, 3, 20deg);
+  transform: rotate3d(1, 2, 3, -20deg);
 }

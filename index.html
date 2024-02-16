@@ -21,11 +21,11 @@
         <!-- <div id="div_X" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
         <script>
             let width = (screen.availWidth / 100) - 1;
-            let height = (screen.availHeight / 100) - 1;
-            for (let x = 0; x < height; x++) {
+            let height = (screen.availHeight / 100);
+            for (let x = 0; x <= height; x++) {
                 for (let i = 0; i < width; i++) {
                     document.write(
-                        '<div id="div_' + i + '" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event) "></div>'
+                        '<div id="div_' + x + i + '" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event) "></div>'
                     );
                 }
             }  
