@@ -27,6 +27,7 @@ function drop(ev) {
 window.onload = function () {
   var gridContainer = document.querySelector('.grid-container');
   gridContainer.innerWidth = screen.availWidth;
+
   var numColumns = Math.floor(gridContainer.innerWidth / 100);
   gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
 

@@ -14,3 +14,4 @@
     c. like have monster builder that you can import or export to other campaigns
     d. usually this would be temporary for this one encounter - highlights the socialization of DnD and enables the people to make new friends
 
+11. Keep track of NPC kills
