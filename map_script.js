@@ -1,3 +1,7 @@
+/*
+  This function allows the user to drag and drop the images from one grid to another in the screen. 
+  It also checks if the grid is full or not and cancels the move if it is already full.
+*/
 function allowDrop(ev) {
   var t = ev.target;
   while (t !== null && !t.classList.contains("grid-item")) {
@@ -23,6 +27,26 @@ function drop(ev) {
   //console.log(ev.target);
   //console.log(animations);
 }
+/* This function is called when the  user double clicks the image and moves it to the top left corner of the screen */
+function knocked_out(elm) {
+  //alert("The image has been knocked out:" + elm.id);
+  var elem = document.getElementById(elm.id);
+
+  let id = null;
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+  
+}
 
 window.onload = function () {
   var gridContainer = document.querySelector('.grid-container');
@@ -40,7 +64,4 @@ window.onresize = function () {
   gridContainer.innerWidth = screen.availWidth;
   var numColumns = Math.floor(gridContainer.innerWidth / 100);
   gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
-
-  /*var numRows = Math.floor(gridContainer.innerHeight / 100);*/
-  /*gridContainer.style.gridTemplateRows = `repeat(${numRows}, 100px)`;    transform: rotateZ(360deg);*/
 }
