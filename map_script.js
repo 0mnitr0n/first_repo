@@ -4,6 +4,7 @@
 */
 function allowDrop(ev) {
   var t = ev.target;
+
   while (t !== null && !t.classList.contains("grid-item")) {
     t = t.parentNode;
   }
@@ -32,21 +33,12 @@ function knocked_out(elm) {
   //alert("The image has been knocked out:" + elm.id);
   var elem = document.getElementById(elm.id);
 
-  let id = null;
-  let pos = 0;
-  clearInterval(id);
-  id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + "px"; 
-      elem.style.left = pos + "px"; 
-    }
-  }
-  
+  elem.style.boxShadow = "1px 1px 30px red";
+  document.getElementById(elm.id).src="red_x.png";
+  elem.style.opacity = "0.5";
+  elem.style.transform = "rotateZ(180deg)";   
 }
+
 
 window.onload = function () {
   var gridContainer = document.querySelector('.grid-container');
