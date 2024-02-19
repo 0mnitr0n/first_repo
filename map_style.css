@@ -1,4 +1,4 @@
-
+/* CSS for the map */
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -12,10 +12,11 @@
   margin: 0px;
 }
 
+/* actual grid square items */
 .grid-item {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 0px;
   height: 100px;
   width: 100px;
