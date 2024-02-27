@@ -1,6 +1,8 @@
 /* CSS for the map */
 .grid-container {
   display: grid;
+  width: 100vw;
+
   grid-template-columns: auto auto auto;
   overflow: hidden;
   grid-gap: 0px;

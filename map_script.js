@@ -22,24 +22,51 @@ function populateMapContainer(className, sizing) {
 function changetofifty() {
 
   var boardPieces = document.querySelectorAll('.board-pieces');
-  alert("here");
 
   boardPieces.forEach( function(element) { 
     element.style.width = "50px";
     element.style.height = "50px";    
   });
 
-
   var gridContainer = document.querySelector('.grid-container');
-  gridContainer.innerWidth = screen.availWidth;
+  gridContainer.innerWidth = 100;
+  gridContainer.style.background.width = "auto";
+
   var numColumns = Math.floor(gridContainer.innerWidth / 50);
   gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
 
-  var gridItem = document.querySelectorAll('.grid-item');
+  var gridItems = document.querySelectorAll('.grid-item');
 
-  gridItem.forEach( function(element) { 
+  gridItems.forEach( function(element) { 
     element.style.width = "50px";
     element.style.height = "50px";    
+  });
+
+}
+
+function changetohundred() {
+
+  var boardPieces = document.querySelectorAll('.board-pieces');
+
+
+  boardPieces.forEach( function(element) { 
+    element.style.width = "100px";
+    element.style.height = "100px";    
+  });
+
+  var gridContainer = document.querySelector('.grid-container');
+  gridContainer.innerWidth = screen.availWidth;
+  gridContainer.style.background.width = "auto";
+
+
+  var numColumns = Math.floor(gridContainer.innerWidth / 100);
+  gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
+
+  var gridItems = document.querySelectorAll('.grid-item');
+
+  gridItems.forEach( function(element) { 
+    element.style.width = "100px";
+    element.style.height = "100px";    
   });
 
 }
