@@ -1,11 +1,5 @@
 
 function populateMapContainer(className, sizing) {
-  /*
-  var gridContainer = document.querySelector('.grid-container');
-  var gridItem = document.querySelector('.grid-item');
-  var gridItemClone = gridItem.cloneNode(true);
-  var gridItemClone2 = gridItem.cloneNode(true);
-  */
 
   let width = (screen.availWidth / sizing) - 1;
   let height = (screen.availHeight / sizing);
@@ -21,15 +15,18 @@ function populateMapContainer(className, sizing) {
 
 function changetofifty() {
 
+  // alert("start width: " + screen.availWidth + " start height: " + screen.availHeight);
+
   var boardPieces = document.querySelectorAll('.board-pieces');
 
   boardPieces.forEach( function(element) { 
     element.style.width = "50px";
-    element.style.height = "50px";    
+    element.style.height = "50px";
+    element.style.borderRadius = "5px";    
   });
 
   var gridContainer = document.querySelector('.grid-container');
-  gridContainer.innerWidth = 100;
+  gridContainer.innerWidth = screen.availWidth;
   gridContainer.style.background.width = "auto";
 
   var numColumns = Math.floor(gridContainer.innerWidth / 50);
@@ -39,19 +36,22 @@ function changetofifty() {
 
   gridItems.forEach( function(element) { 
     element.style.width = "50px";
-    element.style.height = "50px";    
+    element.style.height = "50px"; 
+    element.style.borderRadius = "2px";   
   });
 
-}
+  // alert("end width: " + screen.availWidth + " end height: " + screen.availHeight);
 
+}
+/** this function will change the size back to 100px */
 function changetohundred() {
 
   var boardPieces = document.querySelectorAll('.board-pieces');
 
-
   boardPieces.forEach( function(element) { 
     element.style.width = "100px";
-    element.style.height = "100px";    
+    element.style.height = "100px"; 
+    element.style.borderRadius = "25px";   
   });
 
   var gridContainer = document.querySelector('.grid-container');
@@ -62,11 +62,13 @@ function changetohundred() {
   var numColumns = Math.floor(gridContainer.innerWidth / 100);
   gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
 
+  // grid items are the divs that the images are dropped into
   var gridItems = document.querySelectorAll('.grid-item');
 
   gridItems.forEach( function(element) { 
     element.style.width = "100px";
-    element.style.height = "100px";    
+    element.style.height = "100px";
+    element.style.borderRadius = "10px";    
   });
 
 }

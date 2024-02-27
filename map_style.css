@@ -17,7 +17,7 @@
 /* actual grid square items */
 .grid-item {
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 0px;
   height: 100px;
